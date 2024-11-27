@@ -5,7 +5,7 @@ import SweetAlert from "sweetalert2";
 import Logo from '../../assets/login-assets/SecondaryLogo/metthier2.png'
 import hide from '../../assets/login-assets/hide.png'
 import show from '../../assets/login-assets/show.png'
-import user from '../../assets/login-assets/user-sold-24.png'
+import user from '../../assets/login-assets/user-solid-24.png'
 import lock from '../../assets/login-assets/bxs-lock-alt.svg'
 import line from '../../assets/login-assets/line.png'
 
@@ -63,7 +63,7 @@ function LoginPage() {
 
   return (
     
-    <div className='login-background flex justify-center items-center min-h-screen bg-cover]'>
+    <div className='login-background flex justify-center items-center min-h-screen bg-cover'>
       <div className="flex flex-col min-w-[270px] items-center gap-4 p-4 bg-white/[0.75] drop-shadow rounded-[8px] backdrop-blur-sm">
         <div className="p-2">
           <img
@@ -111,8 +111,8 @@ function LoginPage() {
                   className="scale-x-[-1] opacity-60"
                   src={
                     show
-                      ? {hide}
-                      : {show}
+                      ? hide
+                      : show
                   }
                   alt="Toggle Password Visibility"
                 />
