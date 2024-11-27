@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import SweetAlert from "sweetalert2";
 import Logo from '../../assets/login-assets/SecondaryLogo/metthier2.png'
 import hide from '../../assets/login-assets/hide.png'
-import show from '../../assets/login-assets/show.png'
+import showIcon from '../../assets/login-assets/show.png'
 import user from '../../assets/login-assets/user-solid-24.png'
 import lock from '../../assets/login-assets/bxs-lock-alt.svg'
 import line from '../../assets/login-assets/line.png'
@@ -112,7 +112,7 @@ function LoginPage() {
                   src={
                     show
                       ? hide
-                      : show
+                      : showIcon
                   }
                   alt="Toggle Password Visibility"
                 />
