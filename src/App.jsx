@@ -19,15 +19,15 @@ import ActivityLog from './Pages/Activity-Log/ActivityLog';
 const router = createBrowserRouter([
 
   {
-    path: "/product",
+    path: "/Metthier/product",
     element: <ProductPage />,
   },
   {
-    path: "/login",
+    path: "/Metthier/login",
     element: <LoginPage />,
   },
   {
-    path: "/",
+    path: "/Metthier/",
     element: (
       <ProtectedRoute allowedRoles={["super_admin", "admin", "worker", "super_member", "member"]}>
         <Layout />
@@ -35,21 +35,21 @@ const router = createBrowserRouter([
     ),
     children: [
       {
-        path: "dashboard",
+        path: "/Metthier/dashboard",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin", "worker", "super_member", "member"]}>
             <Dashboard />
           </ProtectedRoute>),
       },
       {
-        path: "inventory",
+        path: "/Metthier/inventory",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin", "worker", "super_member", "member"]}>
             <Inventory />
           </ProtectedRoute>),
       },
       {
-        path: "member-management",
+        path: "/Metthier/member-management",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin", "super_member"]}>
             <MemberManagement />
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "unassigned-work",
+        path: "/Metthier/unassigned-work",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin", "worker"]}>
             <UnassignedWork />
@@ -65,7 +65,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "report-box",
+        path: "/Metthier/report-box",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin"]}>
             <ReportBox />
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "activity-log",
+        path: "/Metthier/activity-log",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin"]}>
             <ActivityLog />
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "setting",
+        path: "/Metthier/setting",
         element: (
           <ProtectedRoute allowedRoles={["super_admin", "admin", "worker", "super_member", "member"]}>
             <Setting />

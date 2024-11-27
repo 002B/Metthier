@@ -21,7 +21,7 @@ function LoginPage() {
       );
       if (status === 200) {
         SweetAlert.close();
-        return navigate("/dashboard");
+        return navigate("/Metthier/dashboard");
       } else if (status === 401) {
         passRef.current.value = "";
         SweetAlert.fire({
