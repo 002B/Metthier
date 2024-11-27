@@ -1,6 +1,8 @@
 import { useState } from "react";
 import SweetAlert from "sweetalert2";
 import "boxicons";
+import './CreateForm.css'
+
 function Confirm() {
   SweetAlert.fire({
     title: "Are you sure?",
@@ -89,7 +91,7 @@ function CreateForm({ data, placeholderData }) {
         </span>
       </div>
       <div className="p-2 border-2 border-secondary rounded-lg">
-      <div className="flex items-center justify-between">
+      <div className="flex col-or-row items-center justify-between">
       <div className="flex w-full flex-col gap-2">
         {data?.map((item) =>
           item !== "File" && item !== "Submit" ? (

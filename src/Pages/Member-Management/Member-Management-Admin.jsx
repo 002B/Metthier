@@ -1,7 +1,6 @@
 import SweetAlert from "sweetalert2";
 import "boxicons";
 import "./Member-Management.css";
-import { useAuth } from "../../Auth/AuthProvider";
 import { getAllUsers} from "../../Auth/User";
 import { getBranchList } from "../../Component/Count";
 
