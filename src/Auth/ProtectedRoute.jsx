@@ -10,7 +10,7 @@ export default function ProtectedRoute({
   const { user } = useAuth();
 
   if (user === null) {
-    return <Navigate to="/login" replace></Navigate>
+    return <Navigate to="/Metthier/login" replace></Navigate>
   }
 
   if  ( user === undefined || (allowedRoles && !allowedRoles.includes(user.role)) ){
