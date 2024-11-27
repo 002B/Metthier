@@ -115,7 +115,7 @@ const Nav = () => {
           </div>
         </div>
         <div className="logout mr-2">
-          <Link className="flex items-center" to="/login" onClick={() => handleLogout()}>
+          <Link className="flex items-center" to="/Metthier/login" onClick={() => handleLogout()}>
             <box-icon color="#FD6E28" type="regular" name="log-out"></box-icon>
           </Link>
         </div>
