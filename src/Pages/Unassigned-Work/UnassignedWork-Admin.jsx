@@ -2,183 +2,10 @@ import { useRef, useState } from "react";
 import SweetAlert from "sweetalert2";
 import "boxicons";
 import "./UnassignedWork.css";
-import placeholderImg from "../../assets/img/placeholder.png";
+import workList from '../../json/report.json';
+import { getAdminAndWorker } from "../../Component/user";
 
-const workList = [
-  {
-    serial: "FTX=2023-001",
-    company: "Thaibev",
-    branch: "Thaibev_1",
-    problem: "place holder for problem description",
-    date: "14/11/2022",
-  },
-  {
-    serial: "FTX=2023-002",
-    company: "Thaibev",
-    branch: "Thaibev_1",
-    problem: "place holder for problem description",
-    date: "14/11/2022",
-  },
-  {
-    serial: "FTX=2023-003",
-    company: "Thaibev",
-    branch: "Thaibev_1",
-    problem: "place holder for problem description",
-    date: "14/11/2022",
-  },
-  {
-    serial: "FTX=2023-054",
-    company: "Thaibev",
-    branch: "Thaibev_2",
-    problem: "place holder for problem description",
-    date: "13/11/2022",
-  },
-  {
-    serial: "FTX=2023-055",
-    company: "Thaibev",
-    branch: "Thaibev_2",
-    problem: "place holder for problem description",
-    date: "13/11/2022",
-  },
-  {
-    serial: "FTX=2023-056",
-    company: "Thaibev",
-    branch: "Thaibev_2",
-    problem: "place holder for problem description",
-    date: "13/11/2022",
-  },
-  {
-    serial: "FTX=2023-057",
-    company: "Thaibev",
-    branch: "Thaibev_2",
-    problem: "place holder for problem description",
-    date: "13/11/2022",
-  },
-  {
-    serial: "FTX=2023-101",
-    company: "SCB",
-    branch: "SCB_1",
-    problem: "place holder for problem description",
-    date: "12/11/2022",
-  },
-  {
-    serial: "FTX=2023-102",
-    company: "SCB",
-    branch: "SCB_1",
-    problem: "place holder for problem description",
-    date: "12/11/2022",
-  },
-  {
-    serial: "FTX=2023-103",
-    company: "SCB",
-    branch: "SCB_1",
-    problem: "place holder for problem description",
-    date: "12/11/2022",
-  },
-  {
-    serial: "FTX=2023-104",
-    company: "SCB",
-    branch: "SCB_1",
-    problem: "place holder for problem description",
-    date: "12/11/2022",
-  },
-  {
-    serial: "FTX=2023-155",
-    company: "SCB",
-    branch: "SCB_2",
-    problem: "place holder for problem description",
-    date: "11/11/2022",
-  },
-  {
-    serial: "FTX=2023-156",
-    company: "SCB",
-    branch: "SCB_2",
-    problem: "place holder for problem description",
-    date: "11/11/2022",
-  },
-  {
-    serial: "FTX=2023-157",
-    company: "SCB",
-    branch: "SCB_2",
-    problem: "place holder for problem description",
-    date: "11/11/2022",
-  },
-  {
-    serial: "FTX=2023-158",
-    company: "SCB",
-    branch: "SCB_2",
-    problem: "place holder for problem description",
-    date: "11/11/2022",
-  },
-];
-
-const workerList = [
-  {
-    user: "worker001",
-    display_name: "John Doe",
-    display_role: "Worker",
-  },
-  {
-    user: "worker002",
-    display_name: "Jennie Franklin",
-    display_role: "Worker",
-  },
-  {
-    user: "worker003",
-    display_name: "Larry Maldonado",
-    display_role: "Worker",
-  },
-  {
-    user: "worker004",
-    display_name: "Cody Simmons",
-    display_role: "Worker",
-  },
-  {
-    user: "worker005",
-    display_name: "Lily Mendoza",
-    display_role: "Worker",
-  },
-  {
-    user: "worker006",
-    display_name: "Jared Mendoza",
-    display_role: "Worker",
-  },
-  {
-    user: "worker007",
-    display_name: "Daniel Campbell",
-    display_role: "Worker",
-  },
-  {
-    user: "worker008",
-    display_name: "Harold Adkins",
-    display_role: "Worker",
-  },
-  {
-    user: "worker009",
-    display_name: "Lester Vaughn",
-    display_role: "Worker",
-  },
-  {
-    user: "admin001",
-    display_name: "Jon Bishop",
-    display_role: "Admin",
-  },
-  {
-    user: "admin002",
-    display_name: "Matthew Marshall",
-    display_role: "Admin",
-  },
-  {
-    user: "admin003",
-    display_name: "Susie Garner",
-    display_role: "Admin",
-  },
-  {
-    user: "admin004",
-    display_name: "Cecelia Wilson",
-    display_role: "Admin",
-  }
-];
+const workerList = getAdminAndWorker();
 
 const filterList = {
   Company: [...new Set(workList.map((work) => work.company))],
@@ -285,7 +112,7 @@ const UnassignedWorkAdmin = () => {
         <div className="worker-list-container grid gap-1 max-h-[600px] overflow-y-scroll border-t-2 border-b-2 border-secondary pt-1 pb-1">
           {workerList.map((worker, index) => (
             <div
-              className={`worker-list-item flex w-full h-[48px] justify-between items-center p-2 border-2 border-secondary rounded-[8px] cursor-pointer drop-shadow transition-all duration-200 hover:brightness-90 ${
+              className={`worker-list-item grid grid-cols-4 w-full h-[48px] justify-between items-center p-2 border-2 border-secondary rounded-[8px] cursor-pointer drop-shadow transition-all duration-200 hover:brightness-90 ${
                 selectedWorker === worker.display_name
                   ? "text-white bg-secondary"
                   : "text-secondary bg-white"
@@ -293,7 +120,7 @@ const UnassignedWorkAdmin = () => {
               key={index}
               onClick={() => toggleSelectedWorker(worker.display_name)}
             >
-              <span className="flex gap-2 items-center">
+              <span className="col-span-2 flex gap-2 items-center">
                 <box-icon
                   name="user-circle"
                   type="regular"
@@ -302,9 +129,11 @@ const UnassignedWorkAdmin = () => {
                 ></box-icon>
                 <span>{worker.display_name}</span>
               </span>
-              <span className="flex gap-2 items-center w-1/2 justify-evenly">
-                <span>{worker.user}</span>
+              <span className="w-full flex gap-2 items-center justify-center">
                 <span>{worker.display_role}</span>
+              </span>
+              <span>
+              <span className="w-full flex gap-2 items-center justify-center">{worker.user}</span>
               </span>
             </div>
           ))}

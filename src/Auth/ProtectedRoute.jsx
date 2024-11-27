@@ -2,7 +2,6 @@ import React from 'react';
 import { useAuth } from './AuthProvider';
 import { Navigate } from 'react-router-dom';
 import PermissionDenied from '../Pages/Permission-Denied/PermissionDenied';
-import LoginPage from '../Pages/Login/Login';
 
 export default function ProtectedRoute({
   allowedRoles,
@@ -11,7 +10,7 @@ export default function ProtectedRoute({
   const { user } = useAuth();
 
   if (user === null) {
-    return <LoginPage />
+    return <Navigate to="/login" replace></Navigate>
   }
 
   if  ( user === undefined || (allowedRoles && !allowedRoles.includes(user.role)) ){

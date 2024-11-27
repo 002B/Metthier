@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import SweetAlert from "sweetalert2";
 import "boxicons";
 import "./ReportBox.css";
-import placeholderImg from "../../assets/img/placeholder.png";
 
 const testReport = [];
 

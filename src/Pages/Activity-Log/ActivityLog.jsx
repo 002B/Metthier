@@ -2,73 +2,7 @@ import React from 'react';
 import DataTable from '../../Component/DataTable/DataTable';
 import Status from '../../Component/Status/Status';
 import { useAuth } from '../../Auth/AuthProvider';
-
-const testActivityLog = [
-    [
-        "2023-01-01",
-        "12:00:01",
-        "Log out",
-        "member001",
-        "member"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Log in",
-        "member001",
-        "member"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Submit Work",
-        "worker001",
-        "worker",
-        
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Member Management",
-        "smember001",
-        "super_member"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Report Accepted",
-        "admin001",
-        "admin"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Report Accepted",
-        "admin001",
-        "admin"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Work Assigned",
-        "admin001",
-        "admin"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Report Rejected",
-        "admin001",
-        "admin"
-    ],
-    [
-        "2023-01-01",
-        "12:00:00",
-        "Work Approved",
-        "admin001",
-        "admin"
-    ]
-]
+import userActivityLog from '../../json/activity-log.json';
 
 const ActivityLog = () => {
     const { user } = useAuth();
@@ -80,7 +14,7 @@ const ActivityLog = () => {
             </div>
             <div className="w-full rounded drop-shadow">
             <div className='bg-white p-1 rounded drop-shadow'>
-            <DataTable tIcon={"revision"} tName={"Activity Log"} title={["Date", "Time", "Activity", "User", "Role"]} data={testActivityLog} hasButton={false} />
+            <DataTable tIcon={"revision"} tName={"Activity Log"} title={["Date", "Time", "Activity", "User", "Role"]} data={userActivityLog} hasButton={false} />
             </div>
             </div>
         </div>

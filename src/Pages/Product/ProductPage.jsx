@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { getItemInfo } from "../../Component/file";
 import CreateForm from "../../Component/CreateForm";
-
 import Logo from "../../assets/Logo/Logo.png";
 import placeholder from "../../assets/img/placeholder.png";
 
@@ -10,7 +9,6 @@ import "boxicons";
 
 const ProductPage = ({ company, branch, id }) => {
   const [show, setShow] = useState(false);
-
   const [selectedData, setSelectedData] = useState(null);
 
   useEffect(() => {

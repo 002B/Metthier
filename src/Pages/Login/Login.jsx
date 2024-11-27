@@ -5,7 +5,7 @@ import SweetAlert from "sweetalert2";
 import Logo from '../../assets/login-assets/SecondaryLogo/metthier2.png'
 import hide from '../../assets/login-assets/hide.png'
 import showIcon from '../../assets/login-assets/show.png'
-import user from '../../assets/login-assets/user-solid-24.png'
+import userIcon from '../../assets/login-assets/user-solid-24.png'
 import lock from '../../assets/login-assets/bxs-lock-alt.svg'
 import line from '../../assets/login-assets/line.png'
 
@@ -30,7 +30,7 @@ function LoginPage() {
       );
       if (status === 200) {
         SweetAlert.close();
-        return navigate("/Metthier/dashboard");
+        return navigate("/dashboard");
       } else if (status === 401) {
         passRef.current.value = "";
         SweetAlert.fire({
@@ -79,7 +79,7 @@ function LoginPage() {
             <div className="flex items-center border border-gray rounded-[6px] h-12 w-full px-2 ">
               <img
                 className="w-[16px] h-[16px] opacity-40"
-                src={user}
+                src={userIcon}
                 alt="User Icon"
               />
               <input

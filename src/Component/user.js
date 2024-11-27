@@ -31,4 +31,35 @@ function getCompanyUser(Com) {
     });
 }
 
-export { getAllUser, getCompanyUser };
+function getAdminAndWorker() {
+    const users = Object.entries(user).map(([key, value]) => {
+      return Object.entries(value).map(([keys, values]) => {
+        if (values["role"] === "admin" || values["role"] === "worker") {
+          switch (values["role"]) {
+            case "admin":
+              values["display_role"] = "Admin";
+              break;
+            case "worker":
+              values["display_role"] = "Worker";
+              break;
+          }
+          return {
+            display_name: values["display_name"],
+            user: keys,
+            company: key,
+            role: values["role"],
+            display_role: values["display_role"],
+            branch: values["branch"]
+          };
+        }
+        return null; // Return null if not admin or worker
+      });
+    }).flat(2);
+  
+    // Filter out any null values that were returned for non-admin/worker roles
+    return users.filter(user => user !== null);
+  }
+
+
+
+export { getAllUser, getCompanyUser, getAdminAndWorker };

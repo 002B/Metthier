@@ -109,10 +109,11 @@ const DataTable = ({
         <div className="flex gap-2 justify-center items-center">
         {hasExport && (
           <button
-            className="border-2 border-primary bg-white rounded flex h-full w-full aspect-square p-1 transition-all duration-300 ease-in-out hover:bg-secondary"
+            className="border-2 border-primary bg-white rounded flex h-full w-full p-1 transition-all duration-300 ease-in-out hover:bg-secondary"
             onClick={() => ExportExcel(data)}
           >
             <box-icon name="export" color="#FD6E28"></box-icon>
+            <span className="px-1 text-primary text-center ">Export</span>
           </button>
         )}
         {hasSearch && (

@@ -100,6 +100,12 @@
     }
   },
   "Metthier": {
+    "worker": {
+      "display_name": "Mamie George",
+      "password": "worker",
+      "role": "worker",
+      "branch": []
+    },
     "worker001": {
       "display_name": "Isabella Marsh",
       "password": "worker",
@@ -160,6 +166,12 @@
       "role": "worker",
       "branch": []
     },
+    "admin": {
+      "display_name": "Dominic McGuire",
+      "password": "admin",
+      "role": "admin",
+      "branch": []
+    },
     "admin001": {
       "display_name": "Miguel Rios",
       "password": "admin",
@@ -188,6 +200,12 @@
       "display_name": "David Lowe",
       "password": "admin",
       "role": "admin",
+      "branch": []
+    },
+    "sadmin": {
+      "display_name": "Leonard Sherman",
+      "password": "sadmin",
+      "role": "super_admin",
       "branch": []
     },
     "sadmin001": {

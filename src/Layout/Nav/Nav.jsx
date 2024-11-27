@@ -37,6 +37,12 @@ const navList = [
     iconType: "regular",
   },
   {
+    name: "Submitted Work",
+    path: "submitted-work",
+    icon: "check",
+    iconType: "regular",
+  },
+  {
     name: "Activity Log",
     path: "activity-log",
     icon: "time",
@@ -59,9 +65,9 @@ function getNavListByRole(userRole) {
     case "worker":
       return navList.filter(item => ["Dashboard", "Inventory" , "Unassigned Work", "Setting"].includes(item.name));
     case "admin":
-      return navList.filter(item => ["Dashboard", "Inventory", "Member Management", "Report Box", "Unassigned Work", "Activity Log", "Setting"].includes(item.name));
+      return navList.filter(item => ["Dashboard", "Inventory", "Member Management", "Report Box", "Unassigned Work", "Submitted Work", "Activity Log", "Setting"].includes(item.name));
     case "super_admin":
-      return navList.filter(item => ["Dashboard", "Data Analysis", "Inventory", "Member Management", "Report Box", "Unassigned Work", "Activity Log", "Setting"].includes(item.name));
+      return navList.filter(item => ["Dashboard", "Data Analysis", "Inventory", "Member Management", "Report Box", "Unassigned Work", "Submitted Work", "Activity Log", "Setting"].includes(item.name));
     default:
       return [];
   }
@@ -115,7 +121,7 @@ const Nav = () => {
           </div>
         </div>
         <div className="logout mr-2">
-          <Link className="flex items-center" to="/Metthier/login" onClick={() => handleLogout()}>
+          <Link className="flex items-center" to="/login" onClick={() => handleLogout()}>
             <box-icon color="#FD6E28" type="regular" name="log-out"></box-icon>
           </Link>
         </div>

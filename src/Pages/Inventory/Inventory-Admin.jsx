@@ -32,6 +32,7 @@ const InventoryAdmin = () => {
           ]}
           data={inventory}
           hasExport={true}
+          hasButton={false}
         />
       </div>
     </div>

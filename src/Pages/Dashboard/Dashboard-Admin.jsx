@@ -46,7 +46,7 @@ const DashboardAdmin = () => {
               <DataTable
                 tIcon="wrench"
                 colIcon={"wrench"}
-                tName={"Recent Submitted Work"}
+                tName={"Unread Submitted Work"}
                 title={["Serial Number", "Worker Name", "Date", "Time"]}
                 data={submittedWork}
                 hasButton={false}
