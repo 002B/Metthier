@@ -16,9 +16,14 @@ import UnassignedWork from "./Pages/Unassigned-Work/UnassignedWork.jsx";
 import SubmittedWork from "./Pages/Submitted-Work/Submitted-Work.jsx";
 import Setting from "./Pages/Setting/Setting.jsx";
 import ActivityLog from "./Pages/Activity-Log/ActivityLog";
+import NotFound from './Pages/Not-Found/Not-Found';
 
 const router = createBrowserRouter(
   [
+    {
+      path: "*",
+      element: <NotFound />,
+    },
     {
       path: "/product",
       element: <ProductPage />,
