@@ -2,6 +2,15 @@ import { useRef, useState } from "react";
 import { useAuth } from "../../Auth/AuthProvider";
 import { useNavigate } from "react-router-dom";
 import SweetAlert from "sweetalert2";
+import Logo from '../../assets/login-assets/SecondaryLogo/metthier2.png'
+import hide from '../../assets/login-assets/hide.png'
+import show from '../../assets/login-assets/show.png'
+import user from '../../assets/login-assets/user-sold-24.png'
+import lock from '../../assets/login-assets/bxs-lock-alt.svg'
+import line from '../../assets/login-assets/line.png'
+
+import './Login.css';
+
 
 function LoginPage() {
   const userRef = useRef();
@@ -54,12 +63,12 @@ function LoginPage() {
 
   return (
     
-    <div className='flex justify-center items-center min-h-screen bg-cover bg-[url("./src/assets/login-assets/Bg/BG.jpg")]'>
+    <div className='login-background flex justify-center items-center min-h-screen bg-cover]'>
       <div className="flex flex-col min-w-[270px] items-center gap-4 p-4 bg-white/[0.75] drop-shadow rounded-[8px] backdrop-blur-sm">
         <div className="p-2">
           <img
             className="w-[360px] h-[100px] object-cover mx-auto"
-            src="./src/assets/login-assets/SecondaryLogo/metthier2.png"
+            src= {Logo}
             alt="Logo"
           />
         </div>
@@ -70,7 +79,7 @@ function LoginPage() {
             <div className="flex items-center border border-gray rounded-[6px] h-12 w-full px-2 ">
               <img
                 className="w-[16px] h-[16px] opacity-40"
-                src="./src/assets/login-assets/user-solid-24.png"
+                src={user}
                 alt="User Icon"
               />
               <input
@@ -86,7 +95,7 @@ function LoginPage() {
             <div className="flex items-center border border-gray rounded-[6px] w-full h-12 px-2">
               <img
                 className="w-[16px] h-[16px] opacity-40"
-                src="./src/assets/login-assets/bxs-lock-alt.svg"
+                src={lock}
                 alt="Lock Icon"
               />
               <input
@@ -102,8 +111,8 @@ function LoginPage() {
                   className="scale-x-[-1] opacity-60"
                   src={
                     show
-                      ? "./src/assets/login-assets/hide.png"
-                      : "./src/assets/login-assets/show.png"
+                      ? {hide}
+                      : {show}
                   }
                   alt="Toggle Password Visibility"
                 />
@@ -121,7 +130,7 @@ function LoginPage() {
                 >
                   <img
                     className="w-7 h-7 relative"
-                    src="./src/assets/login-assets/line.png"
+                    src={line}
                     alt=""
                   />
                 </button>
