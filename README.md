@@ -1,28 +1,44 @@
 Project : Metthier - Fire Extinguisher Management Systems
+-------------------------------------------
 Sripatum University - Computer Science and Software Development Innovation (CSI)
 2024 Group 26
 
-User/Pass to gain access each role
+Github Pages
+-------------------------------------------
+https://002b.github.io/Metthier/
 
--Member
+Member
+-------------------------------------------
 User : member
+
 Pass : member
 
--Super Member
-Pass : smember
+Super Member
+-------------------------------------------
 User : smember
 
--Worker
+Pass : smember
+
+Worker
+-------------------------------------------
 User : worker
+
 Pass : worker
 
--Admin
+Admin
+-------------------------------------------
 User : admin
+
 Pass : admin
 
--Super Admin
+Super Admin
+-------------------------------------------
 User : sadmin
+
 Pass : sadmin
+
+Product Page
+-------------------------------------------
 
 To access product details page simply put
 
